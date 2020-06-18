@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+	<record id="lepay_task_module_tree" model="ir.ui.view">
+		<field name="name">lepay.task.tree</field>
+		<field name="model">lepay.task</field>
+		<field name="arch" type="xml">
+			<tree string="Lepay Task" editable="bottom">
+			    <field name="name"/>
+                            <field name="odd_values"/>
+                            <field name="adjacent_val"/>
+			</tree>
+		</field>
+	</record>
+
+
+	<record id="actions_lepay_task_module" model="ir.actions.act_window">
+		<field name="name">Lepay Task</field>
+		<field name="res_model">lepay.task</field>
+		<field name="view_type">form</field>
+		<field name="view_model">tree</field>
+		<field name="view_id" ref="lepay_task_module_tree"></field>
+	</record>
+
+
+	<menuitem
+		id="menu_lepay_task_parent"
+		name="Lepay Task"/>
+	<menuitem
+		id="menu_lepay_task_module"
+		name="Lepay Task" 
+		parent="menu_lepay_task_parent"
+		action="actions_lepay_task_module"/>
+</odoo>
+
