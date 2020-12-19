@@ -41,7 +41,7 @@ class LepayTask(models.Model):
                       raise exceptions.Warning("Please don't repeat the values")                   
                    else:                   
                       record['odd_values'] = [num for num in list_int if num % 2 == 1]
-
+#vamk tested vamk
 
     @api.depends('name')
     def get_adjacent_val(self):
